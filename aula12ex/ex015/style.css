@@ -23,10 +23,3 @@ footer{
     font-style: italic;
     color: white;
 }
-
-/* image{
-    width: 100px; /* Defina a largura desejada */
-    height: 100px; /* Defina a altura desejada (deve ser igual à largura para criar um círculo) */
-    border-radius: 50%; /* Define o raio de borda como metade da largura/altura para criar um círculo */
-    object-fit: cover; /* Isso garante que a imagem preencha o círculo */
-} */
