@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        div{
+            font: normal 20pt Arial;
+            text-align: center;
+            line-height: 200px;
+
+            background: rgb(71, 218, 71);
+            color: white;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()" removidos e inseridos como addEventListener nas linhas 29 - 31 -->
+    <div id="div-area">
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('div-area')
+        area.addEventListener('click', clicou)
+        area.addEventListener('mouseenter', entrou)
+        area.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            area.innerText = 'AIAI!'
+            area.style.background = 'red';
+        }
+        function entrou(){
+            area.innerText = '-onMouseEnter-'
+        }
+
+        function saiu(){
+            area.innerText = 'onMouseOut'
+            area.style.background = 'rgb(71, 218, 71)'
+        }
+    </script>
+</body>
+</html>

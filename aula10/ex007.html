@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+
+    <style>
+        div{
+            font: normal 15pt Arial;
+            text-align: left;
+            margin-top: 9px;
+        }
+
+        input{
+            width: 100px;
+            margin: 3px;
+        }
+
+        div#resultado {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="primeiro-numero" id="id-primeiro-numero"> +
+    <input type="number" name="segundo-numero" id="id-segundo-numero">
+    <input type="button" id="botao" value="Somar">
+
+    <div id="resultado">
+        Resultado
+    </div>
+    <script>
+        var botao = window.document.getElementById('botao')
+        botao.addEventListener('click', somar)
+
+        function somar(){
+            var primeiroNumero = document.getElementById('id-primeiro-numero')
+            var segundoNumero = document.querySelector('input#id-segundo-numero')
+            var resultado = document.getElementById('resultado')
+
+            var parsePrimeiroNumero = Number(primeiroNumero.value)
+            var parseSegundoNumero = Number(segundoNumero.value)
+
+            var soma = parsePrimeiroNumero + parseSegundoNumero
+
+            resultado.innerHTML = `A soma entre ${parsePrimeiroNumero} e ${parseSegundoNumero} é igual a ${soma}.`
+        }
+    </script>
+</body>
+</html>
