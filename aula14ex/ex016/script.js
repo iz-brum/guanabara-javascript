@@ -14,7 +14,7 @@ function contar() {
         let p = Number(pulos.value)
 
         if (p<=0) {
-            alert('Valor para pulo invalido! Será considerado pulo de 1')
+            alert('Valor para pulo inválido! Será considerado pulo de 1.')
             p = 1
         }
         if (i<f) { // contagem crescente
