@@ -1,19 +1,21 @@
+// Obtendo referências aos elementos HTML
 let number = document.querySelector('input#id-numero');
 let lista = document.querySelector('select#id-lista');
 let resultado = document.querySelector('div#id-resultado');
 let valores = []
 
+// Adicionando um evento de tecla ao campo de número
 number.addEventListener('keyup', function(e){
     var key = e.which || e.keyCode;
-    if (key == 13) { // codigo da tecla enter
+    if (key == 13) { // Código da tecla Enter
       adicionar()
     }
-  });
+});
 
-
+// Função para verificar se um número é válido (entre 1 e 100)
 function isNumberValid(n) {
     n = Number(n)
-    if (Number(n) >= 1 && Number(n) <= 100) {
+    if (n >= 1 && n <= 100) {
         return true
     } 
     else {
@@ -21,6 +23,7 @@ function isNumberValid(n) {
     }
 }
 
+// Função para verificar se um número está na lista de valores
 function inList(n, l) {
     if (l.indexOf(Number(n)) != -1) {
         return true
@@ -29,8 +32,8 @@ function inList(n, l) {
     }
 }
 
+// Função para adicionar um número à lista
 function adicionar(){
-   
     if (isNumberValid(number.value) && !inList(number.value, valores)) {
         valores.push(Number(number.value))
         let item = document.createElement('option')
@@ -39,14 +42,14 @@ function adicionar(){
         resultado.innerHTML = ''
     }
     else{
-     alert('Valor inválido ou já adicionado á lista!')
+     alert('Valor inválido ou já adicionado à lista!')
     }
-
     number.value = ''
     number.focus()
- }
+}
 
- function finalizar(){
+// Função para finalizar e calcular estatísticas
+function finalizar(){
     if (valores.length == 0) {
         alert('Adicione valores antes de finalizar!')
     } else {
@@ -55,7 +58,6 @@ function adicionar(){
         let media = 0
         let maior = valores[0]
         let menor = valores[0]
-        
         
         for (let posicao in valores) {
             soma += valores[posicao]
@@ -76,5 +78,8 @@ function adicionar(){
         resultado.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
         resultado.innerHTML += `<p>A média dos valores é igual a ${media.toFixed(2)}</p>`
     }
- }
- 
+}
+
+// Este código JavaScript cria uma aplicação que permite ao usuário adicionar números a uma lista e, em seguida, calcular estatísticas como o total de números, a soma, a média, o maior e o menor valor. 
+
+// O código também inclui uma funcionalidade para aceitar a tecla Enter para adicionar um número.
