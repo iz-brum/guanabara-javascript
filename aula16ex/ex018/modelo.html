@@ -8,27 +8,40 @@
 </head>
 <body>
     <header>
+        <!-- Título do cabeçalho -->
         <h1>Analisador de vetores</h1>
     </header>
 
     <section>
         <div>
+            <!-- Campo de entrada para o número -->
             Número (entre 1 e 100):
             <input type="number" name="numero" id="id-numero">
+            
+            <!-- Botão para adicionar número -->
             <input type="button" value="Adicionar" onclick="adicionar()">
-            <br><br><select name="lista" id="id-lista" size="8"></select>
-            <br><input type="button" value="Finalizar" onclick="finalizar()">
+            <br><br>
+
+            <!-- Lista para exibir os números adicionados -->
+            <select name="lista" id="id-lista" size="8"></select>
+            <br>
+
+            <!-- Botão para finalizar e calcular estatísticas -->
+            <input type="button" value="Finalizar" onclick="finalizar()">
         </div>
 
+        <!-- Div para exibir os resultados -->
         <div id="id-resultado">
             
         </div>
     </section>
     
     <footer>
+        <!-- Rodapé com informações de direitos autorais -->
         <p>&copy; CursoemVideo</p>
     </footer>
 
+    <!-- Link para o arquivo de script JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
