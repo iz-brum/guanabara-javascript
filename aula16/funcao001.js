@@ -56,3 +56,7 @@ function fatorialRecursiva(parametro) {
 
 // Chama a função recursiva para calcular o fatorial de 5 e imprime o resultado no console
 console.log(fatorialRecursiva(5));
+
+// Este código JavaScript demonstra vários conceitos de funções, incluindo a definição de funções, parâmetros padrão, funções anônimas e recursividade. 
+
+// Cada função tem um propósito diferente e os resultados são impressos no console.
